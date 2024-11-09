@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty and Staff</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+         b{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            color: #3351bc;
+            padding: 20px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style:italic;
+            font-size:xx-large;
+            font:bold;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color:  #465ba5;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: "Baloo 2", sans-serif;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #fdfdfd;
+        }
+
+        .card-content p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #090606;
+        }
+
+        /* Add some padding to the body to ensure content is not hidden behind the navbar */
+        body {
+            padding-top: 70px;
+            /* Adjust according to the navbar height */
+        }
+
+
+
+       
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('./ev/down.jpg');
+            background-size: cover;
+            padding-top: 70px;
+            /* Space for fixed navbar */
+            line-height: 1.5;
+        }
+
+        /* Root Variables */
+        :root {
+            --r: rgb(230, 18, 18);
+            --g: rgb(21, 186, 21);
+            --b: rgb(17, 86, 206);
+            --y: #FFC200;
+            --fb: 'Baloo 2', sans-serif;
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1f2937;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo Container */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .logo-container span {
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+            font-family: var(--fb);
+        }
+
+        /* Navigation Styles */
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--b);
+            text-decoration: underline;
+        }
+
+        /* Hamburger Menu Styles */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background-color: #1f2937;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+                padding: 1rem 0;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <header>
+        <div class="logo-container">
+            <img src="ishju-removebg-preview.png" alt="Logo">
+            <a href="https://ishrae0-2-gqqc.vercel.app/">
+                <span>ISHRAE JU</span>
+            </a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="member.html">Membership</a></li>
+                <li><a href="competition.html">Competition</a></li>
+                <li><a href="achiveAsm.html">Achievement</a></li>
+                <li><a href="ourteam.html">Our Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <b>Faculty Advisor </b>
+        
+        <div id="staff-grid" class="grid">
+            <div class="card">
+                <img src="../ev/sov.jpg" alt="Dr Sourav Sarkar">
+                <div class="card-content">
+                    <h2>Dr Sourav Sarkar</h2>
+                    <p>Faculty Advisor</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../ev/acm.jpg" alt="Prof Achintya Mukhopadhyay">
+
+                <div class="card-content">
+                    <h2>Prof Achintya Mukhopadhyay</h2>
+                    <p>Faculty Advisor</p>
+                </div>
+            </div>
+
+           
+        </div>
+
+        <b>Student Members</b>
+        <div id="student-grid" class="grid">
+            <!-- Student members will be dynamically inserted here -->
+        </div>
+
+        <b>Web Developers</b>
+        <div id="staff-grid" class="grid">
+            <div class="card">
+                <img src="../ev/nabu.jpg" alt="Nabyendu Das">
+                <div class="card-content">
+                    <h2>Nabyendu Das</h2>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="../ev/asm.PNG" alt="Prof Achintya Mukhopadhyay">
+
+                <div class="card-content">
+                    <h2>Asmita Bagchi</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function createStaffCard(member) {
+            return `
+                <div class="card">
+                    <img src="${member.imageUrl}" alt="${member.name}">
+                    <div class="card-content">
+                        <h2>${member.name}</h2>
+                        <p>${member.role}</p>
+                    </div>
+                </div>
+            `;
+        }
+        const studentMembers = [
+            {
+                name: "Mrinmoy Tarafder",
+                role: "President",
+                imageUrl: "../ev/mrin.jpg"
+            },
+            {
+                name: "Arijit Mandal",
+                role: "Secretary",
+                imageUrl: "../ev/arijit.jpg"
+            },
+            {
+                name: "Koustav Bhattacharjee",
+                role: "Treasurer",
+                imageUrl: "../ev/kb.jpg"
+            },
+            {
+                name: "Nilendu Dikshit",
+                role: "Events Coordinator",
+                imageUrl: "../ev/nilu.jpg"
+            },
+            {
+                name: "Sayan Das",
+                role: "Events Coordinator",
+                imageUrl: "../ev/say.jpg"
+            },
+            {
+                name: "Soumyadip Pal",
+                role: "SRPG In-charge ,HACKATHON In-Charge",
+                imageUrl: "../ev/soum.jpg"
+            },
+            {
+                name: "Rishav Nandi",
+                role: "NSDC In-Charge, SRPG In-Charge",
+                imageUrl: "../ev/riv.jpg"
+            },
+            {
+                name: "Hritam Sarkar",
+                role: "HACKTHON In-Charge",
+                imageUrl: "../ev/hritam.jpg"
+            },
+            {
+                name: "Nishant Dey",
+                role: "NSDC In-Charge",
+                imageUrl: "../ev/nisant.jpg"
+            },
+            {
+                name: "Ritesh Kumar Mondal",
+                role: "SOCIAL In-Charge",
+                imageUrl: "../ev/rit.jpg"
+            },
+            {
+                name: "Rachello Paul Chakraborty",
+                role: "SOCIAL In-Charge",
+                imageUrl: "../ev/rachel.jpg"
+            },
+            {
+                name: "Himopravo Chowdhury",
+                role: "Strategic Coordinator",
+                imageUrl: "../ev/himo.jpg"
+            },
+
+
+            {
+                name: "Amrita Dasgupta",
+                role: "Public Reach Incharge",
+                imageUrl: "../ev/amrita.jpg"
+            },
+            {
+                name: "Srija Mondal",
+                role: "Public Reach Incharge",
+                imageUrl: "../ev/srija.jpg"
+            }
+        ]
+
+        function renderStaffGrid() {
+            const gridElement = document.getElementById('student-grid');
+            gridElement.innerHTML = studentMembers.map(createStaffCard).join('');
+        }
+
+        // Render the staff grid when the page loads
+        window.addEventListener('load', renderStaffGrid);
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('nav ul');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+</body>
+
+</html>
